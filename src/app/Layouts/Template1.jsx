@@ -3,9 +3,16 @@ import React from 'react'
 import Image from 'next/image'
 
 function Template1(props) {
+
+  
+  const pdfGenerate=()=>{
+    let doc=new jsPDF('landscape','px','a4','false')
+    
+  }
+
   return (
     <>
-      <div className='p-4 '>
+      <div className='p-4 ' id='temp1'>
         <div className={`flex flex-nowrap flex-col w-3/4 mx-auto gap-y-3 ${props.preview ? 'visible' : 'hidden'}`}>
 
           <div className='p-2 flex flex-col flex-nowrap border-2 border-black'>
@@ -103,10 +110,10 @@ function Template1(props) {
 
             <div className='col-span-8 row-span-4 border-l border-y  border-black px-2 py-1'>Terms & Conditions</div>
 
-            <div className='col-span-4 row-span-4 border-x border-y text-right flex flex-col flex-nowrap items-end border-black pl-2 pr-4 py-1'>
-              For {props.Cname ? props.Cname : 'Company Name'}
-              <Image className='text-right' width={70} height={70} src="/WhatsApp Image 2023-11-07 at 23.26.15_3a89213b.jpg" alt='sign' />
-              Authorised Signatory
+            <div className='col-span-4 row-span-4 border-x border-y text-right flex flex-col flex-nowrap items-end border-black pl-2 pr-4 pb-1'>
+              For {props.Cname ? props.Cname : 'Company Name'} <br />
+              <Image className='mt-2 text-right' width={70} height={70} src="/WhatsApp Image 2023-11-07 at 23.26.15_3a89213b.jpg" alt='sign' />
+              <span className='text-left'>Authorised Signatory</span>
             </div>
           </div>
 
