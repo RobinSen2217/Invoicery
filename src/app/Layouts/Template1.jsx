@@ -4,16 +4,10 @@ import Image from 'next/image'
 
 function Template1(props) {
 
-  
-  const pdfGenerate=()=>{
-    let doc=new jsPDF('landscape','px','a4','false')
-    
-  }
-
   return (
     <>
       <div className='p-4 ' id='temp1'>
-        <div className={`flex flex-nowrap flex-col w-3/4 mx-auto gap-y-3 ${props.preview ? 'visible' : 'hidden'}`}>
+        <div className={`flex flex-nowrap flex-col w-3/4 mx-auto gap-y-3`}>
 
           <div className='p-2 flex flex-col flex-nowrap border-2 border-black'>
             <h3 className='font-semibold underline-offset-4 underline decoration-black text-center mb-2 text-2xl'>GST/Tax Invoice</h3>
